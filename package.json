@@ -1,0 +1,51 @@
+{
+  "name": "test-desjardins",
+  "version": "1.0.0",
+  "description": "Technical test by Desjardins, CRUD API with Auth0",
+  "main": "index.js",
+  "scripts": {
+    "server": "node --experimental-modules --es-module-specifier-resolution=node index.js",
+    "server:dev": "nodemon --experimental-modules --es-module-specifier-resolution=node index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles"
+  },
+  "author": "Paul Souvannarath",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@jest/globals": "^29.7.0",
+    "bcrypt": "^5.1.1",
+    "connect-timeout": "^1.9.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-jwt": "^8.4.1",
+    "express-oauth2-jwt-bearer": "^1.6.0",
+    "joi": "^17.13.1",
+    "jwks-rsa": "^3.1.0",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^24.0.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-security": "^1.4.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.0.5",
+    "supertest": "^7.0.0"
+  },
+  "type": "module",
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "jest-environment-node",
+    "collectCoverage": true,
+    "transform": {},
+    "testMatch": [
+      "**/*.test.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "node_modules"
+    ]
+  }
+}
